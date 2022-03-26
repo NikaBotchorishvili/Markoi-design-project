@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+$gradient-color:45deg,#00F0FF, #5773FF,#FF007A;
+
+body{
+    background: url(/assets/images/background.png);
+    color: white;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+header{
+    max-width: 90%;
+    margin: 0 auto;
+    margin-top: 20px;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .left{
+            h1{
+                cursor: pointer;
+            }
+        }
+        nav{
+            ul{
+                display: flex;
+                justify-content: space-between;
+                list-style: none;
+                gap: 25px;
+                li{
+                    a{
+                        text-decoration: none;
+                        color: white;
+                    }
+                }
+            }
+        }
+        .right{
+            a{
+                margin-right: 10px;
+                color: white;
+                text-decoration: none;
+            }
+            button{
+                position: relative;
+                background: none;
+                color: white;
+                padding: 10 15;
+                cursor: pointer;
+                border: 2px solid transparent;
+                border-radius: 25px;
+                &::before{
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background:linear-gradient($gradient-color) border-box;
+                    border: inherit;
+                    border-radius: inherit;
+                    mask: linear-gradient(white, white) padding-box,
+                            linear-gradient(white, white) ;
+                            mask-composite: exclude;
+                }
+            }
+        }
+    }
+}
+
+section{
+    .content{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        margin: 0 auto;
+        width: 880px;
+        height: 543px;
+        .header-1{
+            font-size: 45px;
+        }
+        .header-2{
+            font-size: 98px;
+            background: -webkit-linear-gradient($gradient-color) border-box;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .bottom-section{
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            button{
+                position: relative;
+                background: none;
+                color: white;
+                cursor: pointer;
+                border: 2px solid transparent;
+                border-radius: 25px;
+                width: fit-content;
+                height: fit-content;
+                padding: 10px 35px;
+                margin: 0 auto;
+                cursor: pointer;
+                font-size: 25px;
+                &::before{
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background:linear-gradient($gradient-color) border-box;
+                    border: inherit;
+                    border-radius: inherit;
+                    mask: linear-gradient(white, white) padding-box,
+                            linear-gradient(white, white) ;
+                        mask-composite: exclude;
+                }   
+            }
+            .down-arrow{
+                width: 85px;
+                height:33px;
+                margin: 0 auto;
+                cursor: pointer;
+                margin-top: 70px;
+            }
+        }
+    }
+}
